@@ -46,7 +46,7 @@ hand, is for used for sending a set of changes to a resource.
 
 If you run `rake routes`, you will see we have some new routes:
 
-```bash
+```txt
 Prefix      Verb  URI Pattern               Controller#Action
                         ...
 edit_article   GET  /articles/:id/edit(.:format) articles#edit
@@ -103,8 +103,8 @@ end
 
 Now that the `edit` view template will have access to the `Article` object (stored
 in `@article`), we need to refactor the form so that it auto-fills the form fields
-with the corresponding data from `@article`. We'll also use a different form helper, 
-`form_for`, which will automatically set up the url where the form will be sent. 
+with the corresponding data from `@article`. We'll also use a different form helper,
+`form_for`, which will automatically set up the url where the form will be sent.
 These changes can be seen below:
 
 ```erb
@@ -140,8 +140,8 @@ end
 ```
 
 The `raise` method will cause the application to pause and print out the
-`params` on an error page. You could also see the `params` if you called 
-`puts params.inspect`; using `puts` would simply require you to track 
+`params` on an error page. You could also see the `params` if you called
+`puts params.inspect`; using `puts` would simply require you to track
 down the data in the Rails server log.
 
 If you open up the browser, navigate to an edit page (such as
@@ -191,4 +191,3 @@ submitted. The `edit` and `update` functions are working properly!
 
 - How could we refactor this form code? You may notice that we have a form for the
   `new` and `edit` actions. Is there a better way of doing this?
-
